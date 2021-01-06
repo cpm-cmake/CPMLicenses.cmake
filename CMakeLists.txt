@@ -31,7 +31,7 @@ set(CPMLicences_SCRIPT_PATH
     CACHE INTERNAL ""
 )
 
-function(create_write_licence_disclaimer_target TARGET_NAME FILE_NAME PACKAGES)
+function(cpm_licences_create_disclaimer_target TARGET_NAME FILE_NAME PACKAGES)
   message("add target for licences: ${PACKAGES}")
 
   set(PACKAGE_SOURCES "")
