@@ -16,7 +16,9 @@ function(write_license_disclaimer FILE_NAME PACKAGES)
       )
       set(PRINT_DELIMITER ON)
     else()
-      message("WARNING: no license files found for package \"${package}\".")
+      message(
+        "WARNING: no license files found for package \"${package}\" in ${${package}_SOURCE_DIR} ."
+      )
     endif()
     if(LICENSE_COUNT GREATER 1)
       message(
@@ -35,8 +37,10 @@ set(CPMlicenses_SCRIPT_PATH
 function(cpm_licenses_create_disclaimer_target TARGET_NAME FILE_NAME PACKAGES)
   set(PACKAGE_SOURCES "")
   foreach(package ${PACKAGES})
+    cpm_get_fetch_properties(${package})
     list(APPEND PACKAGE_SOURCES "-D${package}_SOURCE_DIR=\"${${package}_SOURCE_DIR}\"")
   endforeach()
+  message("package sources: ${PACKAGE_SOURCES}")
 
   add_custom_target(
     ${TARGET_NAME}

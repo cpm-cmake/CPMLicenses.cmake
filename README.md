@@ -16,7 +16,7 @@ Use [CPM.cmake](https://github.com/TheLartians/CPM.cmake) to add CPMLicenses.cma
 CPMAddPackage(
   NAME CPMLicenses.cmake 
   GITHUB_REPOSITORY TheLartians/CPMLicenses.cmake
-  VERSION 0.0.2
+  VERSION 0.0.3
 )
 ```
 
@@ -30,4 +30,4 @@ cpm_licenses_create_disclaimer_target(
 )
 ```
 
-building the target `write licenses` (e.g. `cmake --build build --target write-licenses`) will create the file `build/third_party.txt` containing all license disclaimers of the dependencies.
+building the target `write licenses` (e.g. `cmake --build build --target write-licenses`) will create the file `build/third_party.txt` containing all license disclaimers of dependencies added by CPM.cmake.
