@@ -1,3 +1,6 @@
+![Check](https://github.com/TheLartians/CPMLicenses.cmake/workflows/Check/badge.svg)
+![Check](https://github.com/TheLartians/CPMLicenses.cmake/workflows/Style/badge.svg)
+
 # CPMLicenses.cmake
 
 A license collector for your projects using CPM.cmake.
