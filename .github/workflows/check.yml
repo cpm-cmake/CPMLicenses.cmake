@@ -1,0 +1,25 @@
+name: Check
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches:  [master, main]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: write licences
+      run: |
+        cmake -S test/project -B build/test
+        cmake --build build/test --target write-licences
+
+    - name: check licences
+      run: |
+        grep -q Catch2 build/third_party.txt
+        grep -q fmt build/third_party.txt
