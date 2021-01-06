@@ -11,8 +11,9 @@ function(write_license_disclaimer FILE_NAME PACKAGES)
 
       list(GET licenses 0 license)
       file(READ ${license} license_TEXT)
-      file(APPEND ${FILE_NAME}
-           "The following software may be included in this product: ${package}\n\n${license_TEXT}\n"
+      file(
+        APPEND ${FILE_NAME}
+        "The following software may be included in this product: ${package}. This software contains the following license and notice below:\n\n${license_TEXT}\n"
       )
       set(PRINT_DELIMITER ON)
     else()
