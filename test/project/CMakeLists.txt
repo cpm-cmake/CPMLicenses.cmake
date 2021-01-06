@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
-project(CPMLicenceTest)
+project(CPMlicenseTest)
 
 include(../../cmake/CPM.cmake)
 
-CPMAddPackage(NAME CPMLicences.cmake SOURCE_DIR ..)
+CPMAddPackage(NAME CPMlicenses.cmake SOURCE_DIR ..)
 
 CPMAddPackage(
   NAME Catch2
@@ -17,6 +17,6 @@ CPMAddPackage(
   GITHUB_REPOSITORY fmtlib/fmt
 )
 
-cpm_licences_create_disclaimer_target(
-  write-licences "${CMAKE_CURRENT_BINARY_DIR}/third_party.txt" "${CPM_PACKAGES}"
+cpm_licenses_create_disclaimer_target(
+  write-licenses "${CMAKE_CURRENT_BINARY_DIR}/third_party.txt" "${CPM_PACKAGES}"
 )
