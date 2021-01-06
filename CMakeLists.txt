@@ -32,8 +32,6 @@ set(CPMlicenses_SCRIPT_PATH
 )
 
 function(cpm_licenses_create_disclaimer_target TARGET_NAME FILE_NAME PACKAGES)
-  message("add target for licenses: ${PACKAGES}")
-
   set(PACKAGE_SOURCES "")
   foreach(package ${PACKAGES})
     list(APPEND PACKAGE_SOURCES "-D${package}_SOURCE_DIR=\"${${package}_SOURCE_DIR}\"")

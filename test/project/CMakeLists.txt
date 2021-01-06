@@ -3,7 +3,7 @@ project(CPMlicenseTest)
 
 include(../../cmake/CPM.cmake)
 
-CPMAddPackage(NAME CPMlicenses.cmake SOURCE_DIR ../..)
+CPMAddPackage(NAME CPMlicenses.cmake SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../..)
 
 CPMAddPackage(
   NAME Catch2
