@@ -16,8 +16,8 @@ jobs:
 
     - name: write licenses
       run: |
-        cmake -S test/project -B build/test
-        cmake --build build/test --target write-licenses
+        cmake -S test/project -B build
+        cmake --build build --target write-licenses
 
     - name: check licenses
       run: |
