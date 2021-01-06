@@ -4,7 +4,7 @@ A license collector for your projects using CPM.cmake.
 
 ## About
 
-Many open-source projects require adding a disclaimer to your binary reproducing the dependencies license. Finding and updating the disclaimer for all dependencies can be a tedious task. Luckily, if you've used [CPM.cmake](https://github.com/TheLartians/CPM.cmake) to add the dependencies this process can be automated.
+Many open-source projects require adding a disclaimer to your binary reproducing the dependencies license. Unfortunately, finding and maintaining the disclaimers for all dependencies can be a tedious task. Luckily, if you're using [CPM.cmake](https://github.com/TheLartians/CPM.cmake) to add the dependencies, this process can be automated using this package.
 
 CPMlicenses.cmake will automatically scan all source directories of your CPM.cmake dependencies and find any file that begins with `LICENCE` or `LICENSE`, appending the contents to an output file that you can use as a license disclaimer. If no license has been found for a package, a warning will be emitted. 
 
