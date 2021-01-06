@@ -40,7 +40,6 @@ function(cpm_licenses_create_disclaimer_target TARGET_NAME FILE_NAME PACKAGES)
     cpm_get_fetch_properties(${package})
     list(APPEND PACKAGE_SOURCES "-D${package}_SOURCE_DIR=\"${${package}_SOURCE_DIR}\"")
   endforeach()
-  message("package sources: ${PACKAGE_SOURCES}")
 
   add_custom_target(
     ${TARGET_NAME}
