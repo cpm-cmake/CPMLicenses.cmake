@@ -30,4 +30,4 @@ cpm_licenses_create_disclaimer_target(
 )
 ```
 
-building the target `write licenses` (e.g. `cmake --build build --target write-licenses`) will create the file `build/third_party.txt` containing all license disclaimers of dependencies added by CPM.cmake.
+building the target `write licenses` (e.g. calling `cmake --build build --target write-licenses`) will create the file `third_party.txt` in your build directory, containing all license disclaimers of dependencies added by CPM.cmake.
