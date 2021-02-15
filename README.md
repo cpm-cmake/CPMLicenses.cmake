@@ -18,7 +18,7 @@ Use [CPM.cmake](https://github.com/TheLartians/CPM.cmake) to add CPMLicenses.cma
 ```cmake
 CPMAddPackage(
   NAME CPMLicenses.cmake 
-  GITHUB_REPOSITORY TheLartians/CPMLicenses.cmake
+  GITHUB_REPOSITORY cpm-cmake/CPMLicenses.cmake
   VERSION 0.0.5
 )
 ```
