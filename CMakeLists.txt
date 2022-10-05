@@ -2,7 +2,9 @@ function(write_license_disclaimer FILE_NAME PACKAGES)
   file(WRITE ${FILE_NAME} "")
   set(PRINT_DELIMITER OFF)
   foreach(package ${PACKAGES})
-    file(GLOB licenses "${${package}_SOURCE_DIR}/LICENSE*" "${${package}_SOURCE_DIR}/LICENCE*")
+    file(GLOB licenses "${${package}_SOURCE_DIR}/LICENSE*" "${${package}_SOURCE_DIR}/LICENCE*"
+         "${${package}_SOURCE_DIR}/COPYING*"
+    )
     list(LENGTH licenses LICENSE_COUNT)
     if(LICENSE_COUNT GREATER_EQUAL 1)
       if(PRINT_DELIMITER)

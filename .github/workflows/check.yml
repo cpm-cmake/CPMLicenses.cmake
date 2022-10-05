@@ -24,3 +24,4 @@ jobs:
         grep -q Catch2 build/third_party.txt
         grep -q fmt build/third_party.txt
         grep -q sol2 build/third_party.txt
+        grep -q expected build/third_party.txt

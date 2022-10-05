@@ -26,6 +26,13 @@ CPMAddPackage(
   DOWNLOAD_ONLY YES
 )
 
+CPMAddPackage(
+  NAME expected
+  GITHUB_REPOSITORY TartanLlama/expected
+  VERSION 1.0.0
+  DOWNLOAD_ONLY YES
+)
+
 cpm_licenses_create_disclaimer_target(
   write-licenses "${CMAKE_CURRENT_BINARY_DIR}/third_party.txt" "${CPM_PACKAGES}"
 )
