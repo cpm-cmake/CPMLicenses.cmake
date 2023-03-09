@@ -33,6 +33,13 @@ CPMAddPackage(
   DOWNLOAD_ONLY YES
 )
 
+CPMAddPackage(
+  NAME CMake
+  URL https://github.com/Kitware/CMake/archive/v3.25.3.zip
+  VERSION 3.25.3
+  DOWNLOAD_ONLY YES
+)
+
 cpm_licenses_create_disclaimer_target(
   write-licenses "${CMAKE_CURRENT_BINARY_DIR}/third_party.txt" "${CPM_PACKAGES}"
 )
